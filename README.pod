@@ -1,0 +1,58 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Bot::Cobalt::Plugin::Urban - Bot::Cobalt plugin for looking up urban dictionary terms
+
+=head1 VERSION
+
+version 0.001
+
+=head1 SYNOPSIS
+
+   ## In plugins.conf
+   Urban:
+      Module: Bot::Cobalt::Plugin::Urban      
+
+=head1 DESCRIPTION
+
+A L<Bot::Cobalt> plugin.
+
+This plugin provides commands to look up terms in Urban Dictionary via their
+API.
+
+It has two commands:
+
+=over 4
+
+=item !urban <term> <entry #>
+
+This command retrieves the term and, if provided the specific entry number.
+
+   #mychannel> !urban perl 4
+   < mybot> [4/9] perl: random line noise that does something useful most of the time
+
+=item !urban_random
+
+Retrieves a random urban dictionary entry.
+
+=back
+
+=head1 LIMITATIONS
+
+It appears that the Urban Dictonary API currently only provides 10 entries for
+a given term, and does not provide a mechanism to retrieve additional ones.
+
+=head1 AUTHOR
+
+Scott Miller <scott.j.miller@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Scott Miller.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
